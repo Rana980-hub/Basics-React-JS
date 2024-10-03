@@ -1,0 +1,251 @@
+1) Primitve Data Types (Single element) - number, string, bolean, undefined
+2) Operators (== , === , != , !==)
+3) Collection - Objects & Arrays
+4) Bolean - Truthy means True / Falsy means False -------(0,+0,-0,undefined,nan,null -> Falsy)...other then these all are truthy (- or + all)
+5) Ternery Operator (Condition ? expressionifTrue : expressioniffalse)
+6) For Loop in JS
+7) JS have no type annotation
+8) JS infer the type itself
+9) Ctrl + / = comment
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+1 - Truthy/falsy:
+let a=100;
+if(a)
+  console.log("Truth");
+else
+  console.log("false");
+
+Output: Truth
+
+2 - Objects: //used for records // every key has "values" or "property" and seperated by ","
+let object = { id:12, name:"rana", Feild="Electrical Engg"};
+object.age=20;  //add to list
+object.name="Mike"; //overwrite the name property
+console.log(object.id); //access each property
+
+3- Single element:
+which have no functions or methods call single element/primitive
+
+4- arrays:
+JS supported mixed data types arrays 
+let array=["rana", 12 , true , false];
+
+5- why array used:
+let a=10;
+number is single element stores a single number, for two numbers to be stored we used array
+let array={10,20};
+
+6-Array is dynamic: can add more data and overwrite at any time in JS
+
+7-if give index out range, then JS add it in list as well
+8-JS arrays also support sparse arrays (array with holes)
+9- if we want to print empty hole of array (it prints "undefined");
+
+10; JS always have strings not characters.. string with characters is truthy(true) and string with 0 length like "" is falsy(false);
+11; string with space like " " also considered falsy(false);
+
+12- Collections - array and objects  // objects are better for mix data types //mix data types not recomended for arrays
+13- Operators, "==" called lose quality check, equals the both data types (0 and " ") means false.
+14- Operators, "===" called strict equality check, check for data type and value.
+15- if objects property and nested objects property exist with same name "roll number" and u access them from outside the object, then it overwrite only externel property not internel.
+16- sting + integer = string  in JS
+17- empty objects and empty arrays are truthy (true);
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+18- "type of" tells the data type of element
+19- JS have not float,double etc they have only numbers.
+20- JS is dynamically typed language (can update the data type)
+21- in static, u cannot update the data type.
+22- JS does not show the address of elements. like (let a=10) - don't know where a is allocated.
+23- can overwrite the element but not with same data-type (error in JS) --- let a=10 // let a=5 //console.log(a) -> error (used a=5).
+24- let a; //nothing
+          console.log(a); // prints undefined (datatype of undefined is also undefined)
+25- let a= 10/0 // infinity
+          console.log(a);  // prints infinity (datatype of infinity is number)
+26- let a= 10/"rana"     // nan
+          console.log(a);  // prints nan (datatype of nan is number) -> clash in JS (hahahaha)
+27- datatype of null is objects  //can used to clear the objects
+      1- let selectedUser = null; // No user is selected yet
+      2- let data = { name: "Alice" };
+            data = null; // The data object is now cleared
+28- For loop:
+    for(let a=1; a<=array.length; a++)
+     { console.log(array[a]) };
+            ////    for(let a=1; a<=5; a++)
+                            { console.log(array[a]) };
+
+29- Bolean have also arrays
+       let array=[true, false, false, true];
+30- array->[]   and objects-> {}.
+31- bolean is considered primitive irrespect have two values true,false.
+32- array index start from 0 and length function start from 1.
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+// lec-1 : Data types, truthy-falsy
+// Primitives: atomic type (single value)
+// number, string, boolean, undefined
+
+// No type annotation (type inference based on value)
+// let x = 10.9;
+// console.log(x);
+// console.log(typeof x);
+
+// let city = "a";
+// console.log(city);
+// console.log(typeof city);
+
+// let active = false;
+// console.log(active);
+// console.log(typeof active);
+
+// js is dynamically typed language (no static typing)
+// let x = 10.9; // number
+// console.log(x);
+// console.log(typeof x);
+
+// x = "Pakistan"; // string
+// console.log(x);
+// console.log(typeof x); 
+
+// undefined
+// let x;
+// console.log(x); // value
+// console.log(typeof x); // type
+
+// truthy-falsy
+// number, string, boolean, undefined
+// // boolean
+// let active = false;
+
+// if(active)
+// 	console.log("TRUE");
+// else
+// 	console.log("FALSE");
+
+
+// number
+// 0, NaN= falsy, ALL OTHER TRUTHY
+// let stock = -10 / 0;
+// console.log(stock); // Infinity
+// console.log(typeof stock); // number
+
+// let stock = 0.01;
+// console.log(stock); // NaN
+// console.log(typeof stock); // number
+
+// if(stock)
+// 	console.log("TRUTHY");
+// else
+// 	console.log("FALSY");
+
+
+// string
+// Empty string = falsy value, all other truthy
+// let stock = "";
+
+// if(stock)
+// 	console.log("TRUTHY");
+// else
+// 	console.log("FALSY");
+
+// undefined (falsy)
+// let stock;
+
+// if(stock)
+// 	console.log("TRUTHY");
+// else
+// 	console.log("FALSY");
+
+
+// null (falsy)
+// let stock = null;
+// console.log(stock);
+// console.log(typeof stock);
+
+// if(stock)
+// 	console.log("TRUTHY");
+// else
+// 	console.log("FALSY");
+
+
+// if(0 === "")
+// 	console.log("TRUTHY");
+// else
+// 	console.log("FALSY");
+
+// if(undefined === null)
+// 	console.log("TRUTHY");
+// else
+// 	console.log("FALSY");
+
+
+// collections: array, object
+// array (ordered / index)
+// let marks = [90, 80, 20, 70, 10];
+// console.log(marks[0]);
+// console.log(marks[1]);
+
+// let cities = ["Lahore", "Karachi", "Peshawar"];
+// console.log(cities);
+// console.log(cities[2]);
+
+
+// let active = [true, true, false, false, true];
+// console.log(active);
+
+// mix types (not rcommended)
+// let array = [90, "Ahmad", true, "Sdfsdf", 23, undefined, "sdfgs"];
+// console.log(array);
+
+// let active = [1, 1, 0, 0, 1];
+// for(let i=0; i<active.length; i++)
+// 	console.log(active[i] ? "true":  "false");
+
+// similar (mix), consecutive (sparse)
+// mix, dynamic, 
+// let marks = [90, 80, 0, 70, 10];
+// marks[10] = 99;
+// marks[11] = 993;
+// marks[15] = 99;
+// // console.log(marks);
+// // console.log(marks[6]); // empty
+
+// for (let i = 0; i < marks.length; i++) {
+// 	// Check if the value is defined and not equal to null or undefined
+// 	if (marks[i] !== undefined) {
+// 			truthyMarks.push(marks[i]);
+// 	}
+// }
+
+// object (record/ struct)
+// property (key : value pair)
+// let product = {
+// 	id: 101,
+// 	title: "Mobile Phone",
+// 	prince: 50000,
+// 	// stock: 5
+// };
+
+// product.stock = 165;
+// product.sale = "0.10";
+
+// console.log(product);
+// console.log(product.title);
+
+
+// let x = "asfasfsf";
+// console.log(x[0]);
+
+
+
+aug3.js
+Displaying aug3.js.
+
+
+
+
+
