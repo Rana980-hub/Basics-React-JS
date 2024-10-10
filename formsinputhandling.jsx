@@ -39,7 +39,7 @@ export default function App() {
                                 name="username"
                                 placeholder="Enter Your Name"
                                 value={inputs.username} //ye input username kay liye hy
-                                onChange={handlechange}   //Handlechange kay ander event hota hy React me
+                                onChange={handlechange}   //event "onChange" kay ander hota hy react me, funtion kay ander as parameter bhi day sktay hy
                             />
                         </div>
                     </div>
@@ -55,7 +55,7 @@ export default function App() {
                                 name ="password"
                                 placeholder="Enter Your Password"
                                 value={inputs.password}   //ye input password kay liye hy
-                                onChange={handlechange}   //Handlechange kay ander event hota hy React me
+                                onChange={handlechange}   //event "onChange" kay ander hota hy react me, funtion kay ander as parameter bhi day sktay hy
                             />
                         </div>
                     </div>
