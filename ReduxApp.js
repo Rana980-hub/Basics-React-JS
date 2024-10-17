@@ -5,7 +5,7 @@ import { increment, decrement } from './features/counterSlice';  // Import the a
 function App() {
   // Access the current state value from Redux store
   const count = useSelector((state) => state.counter.value); //iske ander current state (value) hoti hy and ye usko update krta rehta hy jese hi koi action perform hota hy 
-
+  // if u want counterslice data (available in redux store) in any functional component, u can use "useSelecter"
   // Get the dispatch function to dispatch actions
   const dispatch = useDispatch();   //dispacth is function jo reduc store ko call bhejta hy 
   // (like "dispatch(increment(3))"  or kehta hy user ne "type = increment" btaye hy and "payload = 3"  kaha hy..then waha se "increment ka function dekh kr uske ander jo action perform hoa hota hy usko UI me render kr deta hy"
