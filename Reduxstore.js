@@ -6,7 +6,12 @@ const store = configureStore({
   reducer: {
     counter: counterReducer,
   },
-  // Adding Redux DevTools support
+
+
+
+
+  
+  // Extra - Adding Redux DevTools support
   devTools: process.env.NODE_ENV !== 'production', // Enable DevTools in development mode
 });
 
